@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrandShield AI | VerityForge</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body><div class="layout">
+<aside class="side"><div class="logo"><span class="logo-mark">B</span><div><b>BrandShield AI</b><small>GOVERNANCE STUDIO</small></div></div>
+<div class="nav-label">WORKSPACE</div>
+<button class="nav active" data-view="review">✳ &nbsp; Content review</button>
+<button class="nav" data-view="library">▤ &nbsp; Brand knowledge</button>
+<button class="nav" data-view="history">◷ &nbsp; Review history</button>
+<div class="side-foot"><i></i> Prototype workspace ready</div></aside>
+<main><header><div><div class="eyebrow">VERITYFORGE / BRAND WORKSPACE</div><h1 id="page-title">Content review</h1></div><span class="human-pill">● Human-in-the-loop</span></header>
+<section id="view-review" class="view">
+<div class="intro"><div><h2>Check before you publish.</h2><p>Review content against approved brand facts and terminology. Every finding explains what triggered it.</p></div><div class="spark">✳</div></div>
+<div class="columns">
+<div class="panel"><div class="panel-head"><b><em>01</em> Content to review</b><small>TEXT INPUT</small></div>
+<label>Content name</label><input id="review-title" value="Product launch announcement" placeholder="e.g. Product launch announcement">
+<label>Paste content</label><textarea id="review-content" rows="11" placeholder="Paste an announcement, product description or marketing copy..."></textarea>
+<button class="primary wide" id="run">Run brand review <span>→</span></button><p class="hint">The engine checks this content against the approved source library. A human reviewer makes the final decision.</p></div>
+<div class="panel"><div class="panel-head"><b><em>02</em> Approved knowledge</b><button class="link" data-goto="library">Manage →</button></div>
+<div id="source-summary" class="summary"><div class="empty-icon">▤</div><b>Build your brand library</b><p>Add approved facts, preferred terms and words to avoid.</p></div>
+<div class="legend"><b>Evidence statuses</b><div><span class="supported">SUPPORTED</span><span class="contradicted">CONTRADICTED</span><span class="unverified">UNVERIFIED</span></div></div></div>
+</div><div id="results" class="panel results hidden"></div></section>
+<section id="view-library" class="view hidden"><div class="intro"><div><h2>Your approved source of truth.</h2><p>Add the facts and rules every piece of content should follow.</p></div></div>
+<div class="columns library-columns"><div class="panel"><div class="panel-head"><b>Add brand knowledge</b><small>SOURCE LIBRARY</small></div>
+<form id="source-form"><label>Source name</label><input id="source-name" required placeholder="e.g. Brand guidelines v1.0">
+<label>Guidelines or approved facts</label><textarea id="source-content" rows="9" placeholder="Preferred term: members&#10;Avoid term: customers&#10;Approved fact: Our platform is available on web and mobile."></textarea>
+<div class="or">OR UPLOAD PDF, DOCX OR TXT</div><input id="source-file" type="file" accept=".pdf,.docx,.txt,.md">
+<button class="primary wide">Add to approved library <span>＋</span></button></form>
+<div class="callout"><b>Tip for best results</b><p>Use one rule per line: “Preferred term: …”, “Avoid term: …” or “Approved fact: …”. This makes checks transparent and repeatable.</p></div></div>
+<div class="panel"><div class="panel-head"><b>Connected sources</b><small id="source-count">0 SOURCES</small></div><div id="source-list" class="list"></div></div></div></section>
+<section id="view-history" class="view hidden"><div class="intro"><div><h2>Review activity.</h2><p>Previous checks and the human decision recorded for each one.</p></div></div><div class="panel"><div class="panel-head"><b>Recent reviews</b><button class="link" id="refresh">Refresh ↻</button></div><div id="history-list" class="list"></div></div></section>
+<footer>BRANDSHIELD AI <span>Evidence-led checks. Human-led decisions.</span></footer></main></div><div id="toast" class="toast"></div><script src="/static/app.js"></script></body></html>

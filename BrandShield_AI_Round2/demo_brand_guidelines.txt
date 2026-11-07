@@ -1,0 +1,4 @@
+Preferred term: members
+Avoid term: customers
+Approved fact: Our platform helps small businesses organise customer conversations in one workspace.
+Approved fact: The platform is available on web and mobile.
